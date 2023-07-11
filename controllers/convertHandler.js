@@ -40,7 +40,7 @@ function ConvertHandler() {
     let alphRegex = /[a-zA-Z]+/g;
     stri=input.match(alphRegex);
     let uarr=["km","mi","gal","l","kg","lbs","KM","MI","GAL","L","KG","LBS"];
-    if(stri==null || !uarr.includes(stri[0])){
+    if(stri[0]==null || !uarr.includes(stri[0])){
       result=undefined;
     }
     else{result=stri[0];}
