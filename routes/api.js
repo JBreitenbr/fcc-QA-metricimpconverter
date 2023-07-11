@@ -14,7 +14,7 @@ module.exports = function (app) {
       initUnit=initUnit.toLowerCase();
     }
     if(initUnit=="l"){initUnit="L";}
-    if (!initNum && !initUnit) {
+    if ((initNum==undefined || initNum==null) && initUnit==undefined) {
       res.json("invalid number and unit");
       return;
     } else if (initNum==undefined ||  initNum==null) {
