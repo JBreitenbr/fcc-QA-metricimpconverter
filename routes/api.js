@@ -14,14 +14,14 @@ module.exports = function (app) {
       initUnit=initUnit.toLowerCase();
     }
     if(initUnit=="l"){initUnit="L";}
-    if(initNum.indexOf("//")>0 && !initUnit){
+    /*if(initNum.indexOf("//")>0 && !initUnit){
       res.json("invalid number and unit");
       return;
     }
     if(initNum.indexOf("//")>0 && !(initUnit==undefined||initUnit==null)){
       res.json("invalid number");
       return;
-    }
+    }*/
     if ((initNum==undefined || initNum==null) && initUnit==undefined) {
       res.json("invalid number and unit");
       return;
