@@ -10,17 +10,17 @@ module.exports = function (app) {
     let input = req.query.input;
     let initNum = convertHandler.getNum(input);
     let initUnit = convertHandler.getUnit(input);
-    if(initUnit!=undefined){
+    if(initUnit!=undefined && initUnit!=null){
       initUnit=initUnit.toLowerCase();
     }
     if(initUnit=="l"){initUnit="L";}
     if (!initNum && !initUnit) {
       res.json("invalid number and unit");
       return;
-    } else if (!initNum) {
+    } else if (initNum==undefined ||  initNum==null) {
       res.json("invalid number");
       return;
-    } else if (initUnit==undefined) {
+    } else if (initUnit==undefined || initUnit==null) {
       res.json("invalid unit");
       return;
         }
